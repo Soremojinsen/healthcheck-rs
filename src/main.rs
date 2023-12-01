@@ -75,13 +75,13 @@ fn main() {
             match client.get(&host_config.url).send() {
                 Ok(object) => {
                     if object.status().is_success() {
-                        println!("{} - {}", host_config.name, '\u{2705}');
+                        println!("{} - {}", host_config.name, '\u{2714}');
                     } else {
-                        println!("{} - {} - {}", host_config.name, '\u{274c}', object.status().as_str());
+                        println!("{} - {} - {}", host_config.name, '\u{2716}', object.status().as_str());
                     }
                 },
                 Err(e) => {
-                    println!("{} - {} - {:?}", host_config.name, '\u{274c}', e);
+                    println!("{} - {} - {:?}", host_config.name, '\u{2716}', e);
                 },
             }
         }    
